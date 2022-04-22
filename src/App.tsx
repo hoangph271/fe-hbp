@@ -1,15 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import styled from 'styled-components'
-import { NonStopWatch } from './components/NonStopWatch'
+import { NotFoundPage } from './components/NotFoundPage'
 import type { StyledFC } from './types'
-
-const PortfolioSummary: StyledFC = () => {
-  return (
-    <div>
-      {'PortfolioSummary'}
-    </div>
-  )
-}
 
 const App: StyledFC = (props) => {
   const { className } = props
@@ -18,8 +10,7 @@ const App: StyledFC = (props) => {
     <Router>
       <div className={className} data-testid="App">
         <Routes>
-          <Route path="/" element={<PortfolioSummary />} />
-          <Route path="*" element={<NonStopWatch />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
     </Router>
