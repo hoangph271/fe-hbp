@@ -1,6 +1,6 @@
 import { StyledFC } from '../types'
 
-export const NotFoundPage: StyledFC = () => {
+export const NotFound: StyledFC = () => {
   return (
     <h4>
       {'404 | Not Found'}

@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import styled from 'styled-components'
-import { NotFoundPage } from './components/NotFoundPage'
+
+import { NotFound } from './routes/NotFound'
+import { SignIn } from './routes/SignIn'
+
 import type { StyledFC } from './types'
 
 const App: StyledFC = (props) => {
@@ -10,7 +13,8 @@ const App: StyledFC = (props) => {
     <Router>
       <div className={className} data-testid="App">
         <Routes>
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
